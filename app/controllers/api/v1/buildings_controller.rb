@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+# Module which contains V1 Namespaced APIs
+# For buildings
 module Api
   module V1
+    # Buildings Controller
     class BuildingsController < ApplicationController
       include BuildingOperations
 

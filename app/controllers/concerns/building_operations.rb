@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Operations for buildings defined in this concern
 module BuildingOperations
   extend ActiveSupport::Concern
 

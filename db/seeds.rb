@@ -23,7 +23,7 @@ clients.each_with_index do |client, index|
   custom_field_data = [
     { name: 'Number of rooms', field_type: 'number' },
     { name: 'Color of Hall', field_type: 'freeform' },
-    { name: 'Type of Bathroom', field_type: 'enum', options: ['Full', 'Half', 'Two-quarter', 'Slave'] },
+    { name: 'Type of Bathroom', field_type: 'enum', options: %w[Full Half Two-quarter Slave] },
     { name: 'Year of Construction', field_type: 'number' }
   ]
 
@@ -39,31 +39,31 @@ clients.each_with_index do |client, index|
   end
 
   address_hsh = {
-    0 => 
+    0 =>
       {
         0 => '100 Main St',
         1 => '101 Main St',
         2 => '102 Main St'
       },
-    1 => 
+    1 =>
       {
         0 => '103 Main St',
         1 => '104 Main St',
         2 => '105 Main St'
       },
-    2 => 
+    2 =>
       {
         0 => '106 Main St',
         1 => '107 Main St',
         2 => '108 Main St'
       },
-    3 => 
+    3 =>
       {
         0 => '109 Main St',
         1 => '110 Main St',
         2 => '111 Main St'
       },
-    4 => 
+    4 =>
       {
         0 => '112 Elm St',
         1 => '113 Elm St',
@@ -88,10 +88,10 @@ clients.each_with_index do |client, index|
 
   custom_fields_hsh = {
     0 => {
-      'Number of rooms' =>  5,
-      'Color of Hall' =>  'Blue',
-      'Type of Bathroom' =>  'Full',
-      'Year of Construction' =>  2000
+      'Number of rooms' => 5,
+      'Color of Hall' => 'Blue',
+      'Type of Bathroom' => 'Full',
+      'Year of Construction' => 2000
     },
     1 => {
       'Number of rooms' => 8,
@@ -117,7 +117,7 @@ clients.each_with_index do |client, index|
       'Type of Bathroom' => 'Slave',
       'Year of Construction' => 2020
     }
-}
+  }
 
   # Create buildings for each client with custom field values if they don't exist
   3.times do |i|
