@@ -189,9 +189,11 @@ application up and running.
   in Ruby. In order to use this code, we must first start the application at a specific
   port - (say 3000). This is essential because
 
+  ```
   1. Unless application is running, API endpoints will not be available.
   2. seeds.rb is used to seed the database and create records in database only when we
      start the application. Once application is running, the following code can be used
+  ```
 
   ```ruby
   require 'net/http'
