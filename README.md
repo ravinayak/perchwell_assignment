@@ -14,7 +14,7 @@ application up and running.
 2. Install dependencies: Dependencies can be installed using the following command:
    ```
    cd perchwell_assignment
-    bundle install
+   bundle install
    ```
 3. Set up the database: To setup database for development and test, use the following commands:
    To setup database for development environment
