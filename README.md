@@ -9,17 +9,14 @@ application up and running.
 
 1. Clone the repository: To clone the respository, use the following command:
    ```
-   git clone
+   git clone git@github.com:ravinayak/perchwell_assignment.git
    ```
 2. Install dependencies: Dependencies can be installed using the following command:
    ```
+   cd perchwell_assignment
     bundle install
    ```
 3. Set up the database: To setup database for development and test, use the following commands:
-   ```
-    RAILS_ENV=test rails db:create
-    RAILS_ENV=test rails db:migrate
-   ```
    To setup database for development environment
    ```
    rails db:create
@@ -34,9 +31,12 @@ application up and running.
    rails s -p <port_number>
    ```
 5. Running Tests: Tests can be run for the application when we are in the project directory. All tests
-   are in spec directory
+   are in spec directory. First we have to create test database, load the schema, and then we can run
+   tests
    ```
    cd perchwell_assignment
+   RAILS_ENV=test rails db:create
+   RAILS_ENV=test rails db:migrate
    rspec
    ```
 6. **API Endpoints**:
