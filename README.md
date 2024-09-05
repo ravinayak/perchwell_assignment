@@ -71,7 +71,7 @@ application up and running.
                        "type": "string",
                        "enum": ["enum_value1", "enum_value2"]
                      },
-                     { "type": "string" }, // freeform text
+                     { "type": "string" },
                      { "type": "number" }
                    ]
                  }
