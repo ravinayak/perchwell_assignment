@@ -26,8 +26,8 @@ application up and running.
    start the application it will try to create database with seed data. The database must be created
    first and migrations should be run (or schema file should be loaded).
    ```
-   rails db:create
-   rails db:schema:load OR rails db:migrate
+   rails db:create (if database has not been created)
+   rails db:schema:load OR rails db:migrate (if database has not been created)
    rails s -p <port_number>
    ```
 5. Running Tests: Tests can be run for the application when we are in the project directory. All tests
@@ -186,7 +186,12 @@ application up and running.
 
 - **Sample Code to test APIs in Ruby**
   This application can be tested for functionality using the following code snippet
-  in Ruby
+  in Ruby. In order to use this code, we must first start the application at a specific
+  port - (say 3000). This is essential because
+
+  1. Unless application is running, API endpoints will not be available.
+  2. seeds.rb is used to seed the database and create records in database only when we
+     start the application. Once application is running, the following code can be used
 
   ```ruby
   require 'net/http'
