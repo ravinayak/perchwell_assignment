@@ -39,7 +39,7 @@
 
 There are 3 API Endpoints:
 
-a. **GET /api/v1/buildings**: This is an index action, and it returns all the buildings in database in specific format, an
+a. `GET /api/v1/buildings`: This is an index action, and it returns all the buildings in database in specific format, an
 array of building objects is returned where each building object has a structure defined as below:
 defined as below:
 
@@ -122,7 +122,7 @@ JSON format of response is as defined below:
 }
 ```
 
-b. **GET /api/v1/buildings/id**: This fetches information about a specific building. It returns an error 'Not Found', if
+b. `GET /api/v1/buildings/id`: This fetches information about a specific building. It returns an error 'Not Found', if
 building is not found.
 
 JSON format of response is as defined below:
@@ -148,7 +148,7 @@ JSON format of response is as defined below:
 }
 ```
 
-c. **POST /api/v1/buildings**: This endpoint allows us to create a building. It returns the building which was created or an error
+c. `POST /api/v1/buildings`: This endpoint allows us to create a building. It returns the building which was created or an error
 response if building could not be created.
 
 JSON format of payload is as defined as below:
@@ -169,7 +169,7 @@ JSON format of payload is as defined as below:
 }
 ```
 
-d. **PATCH /api/v1/buildings/id**: This endpoint allows us to edit a building information. Its format is similar to POST
+d. `PATCH /api/v1/buildings/id`: This endpoint allows us to edit a building information. Its format is similar to POST
 JSON Format
 
 ## Curl Requests for Accessing APIs:
