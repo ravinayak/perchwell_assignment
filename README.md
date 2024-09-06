@@ -37,7 +37,7 @@
 
 ## API Endpoints:
 
-There are 3 API Endpoints:
+There are 4 API Endpoints:
 
 - **GET /api/v1/buildings**: This is an index action, and it returns all the buildings in database in specific format, an
   array of building objects is returned where each building object has a structure defined as below:
