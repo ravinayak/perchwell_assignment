@@ -11,10 +11,9 @@
    cd perchwell_assignment
    bundle install
    ```
-3. Set up the database: To setup database for development and test, use the following commands:
-   To setup database for development environment. This setup assumes that Postgres is installed
-   on developer's machine. If we have setup any username/password for the database, those values
-   should be updated in config/database.yml file as below:
+3. Set up the database: This setup assumes that Postgres is installed on developer's machine.
+   If we have setup any username/password for the database, those values should be updated in
+   config/database.yml file as below:
 
    ```
    development:
