@@ -12,11 +12,30 @@
    bundle install
    ```
 3. Set up the database: To setup database for development and test, use the following commands:
-   To setup database for development environment
+   To setup database for development environment. This setup assumes that Postgres is installed
+   on developer's machine. If we have setup any username/password for the database, those values
+   should be updated in config/database.yml file as below:
+
+   ```
+   development:
+   <<: *default
+   database: perchwell_assignment_development
+    The specified database role being used to connect to postgres.
+    To create additional roles in postgres see `$ createuser --help`.
+    When left blank, postgres will use the default role. This is
+    the same name as the operating system user running Rails.
+    username:
+    The password associated with the postgres role (username).
+    password:
+   ```
+
+   Once these fields, have been updated in database.yml file, we should run the following commands
+
    ```
    rails db:create
    rails db:migrate
    ```
+
 4. Run the server: We can run the rails server at port 3000 by using 'rails s -p 3000'. When you
    start the application it will try to create database with seed data. The database must be created
    first and migrations should be run (or schema file should be loaded).
@@ -171,6 +190,13 @@ JSON format of payload is as defined as below:
 
 - **PATCH /api/v1/buildings/id**: This endpoint allows us to edit a building information. Its format is similar to POST
   JSON Format
+
+## Seeds File:
+
+Seeds file to seed database with sample data for clients, custom_fields, buildings, building_custom_fields is located in `db/seeds.rb`
+It contains 5 clients, 4 custom fields, and creates 3 buildings for each client with custom attributes. This seed file is automatically
+loaded on application initialization. The initializer which runs this seeds file is is `config/initializers/run_seeds.rb`. Seeds file
+uses "find_or_create" which ensures that records are created only once when the application starts. Duplicate records are not created
 
 ## Curl Requests for Accessing APIs:
 
